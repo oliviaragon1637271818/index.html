@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IGE NEWS</title>
+  <title>| Tu Mundo, Tu Visión, Tu Futuro</title>
+  <!-- Fuentes: Merriweather para títulos y texto clásico, e Inter para contenido complementario -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ciruela: #701f57;
+      --ciruela-claro: #943674;
+      --gris: #f0f0f0;
+      --negro: #222;
+    }
+    
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: var(--gris);
+      color: var(--negro);
+      line-height: 1.8;
+      padding: 1rem;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Encabezado sofisticado */
+    header {
+      text-align: center;
+      border-bottom: 4px double var(--ciruela);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 3rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ciruela);
+    }
+    header h2 {
+      font-size: 1.5rem;
+      color: var(--ciruela-claro);
+      margin-top: 0.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    
+    /* Secciones con estilo periodístico */
+    section {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+      page-break-inside: avoid;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      color: var(--ciruela);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      border-left: 5px solid var(--ciruela);
+      padding-left: 0.75rem;
+      text-transform: uppercase;
+    }
+    
+    /* Distribución en columnas para simular un periódico */
+    .columns {
+      column-count: 2;
+      column-gap: 2rem;
+      text-align: justify;
+    }
+    
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      break-inside: avoid;
+    }
+    
+    .highlight, blockquote {
+      background: var(--gris);
+      border-left: 5px solid var(--ciruela);
+      padding: 1rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    blockquote {
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    /* Quiz con toque moderno y periodístico */
+    .quiz {
+      padding: 1.5rem;
+      border: 2px solid var(--ciruela-claro);
+      border-radius: 8px;
+      background: #fff5fa;
+      margin-top: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .quiz p, .quiz label {
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      background-color: var(--ciruela);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: var(--ciruela-claro);
+    }
+    
+    /* Sección Especial: EMPRENDE TU FUTURO, con layout sofisticado */
+    .emprende-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      border-top: 3px double var(--ciruela);
+      padding-top: 1.5rem;
+    }
+    .emprende-col {
+      flex: 1;
+      min-width: 300px;
+      padding: 1rem;
+      background: #fff5fa;
+      border: 1px solid var(--ciruela-claro);
+      border-radius: 8px;
+    }
+    .emprende-col h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      color: var(--ciruela);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+    .emprende-col ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    /* Pie de Página */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+      .columns {
+        column-count: 1;
+      }
+      .emprende-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Encabezado del Periódico -->
+    <header>
+      <h1>IGE NEWS</h1>
+      <h2>Tu mundo, tu visión, tu futuro</h2>
+      <p>Edición mensual para jóvenes líderes y mentes estratégicas</p>
+    </header>
+    
+    <!-- Primera Parte: Llamado Inicial -->
+    <section>
+      <h2 class="section-title">¡DA EL PASO HACIA LA GESTIÓN DEL FUTURO!</h2>
+      <div class="columns">
+        <p>Descubre cómo convertirte en un ingeniero que lidera, transforma y revoluciona organizaciones. En cada página, encuentra historias y consejos para construir tu camino profesional y dejar tu huella en el mundo empresarial.</p>
+      </div>
+    </section>
+    
+    <!-- Carrera Destacada -->
+    <section>
+      <h2 class="section-title">Carrera Destacada</h2>
+      <div class="columns">
+        <p><strong>Ingeniería en Gestión Empresarial:</strong> El arte de liderar con propósito.</p>
+        <p>Disponible en:</p>
+        <ol>
+          <li>Campus Cajeme</li>
+          <li>Campus Vícam</li>
+          <li>Campus Álamos</li>
+        </ol>
+        <p><strong>División a cargo:</strong> Mtra. Sara Lizette Sonqui Amador</p>
+        <p><strong>Contacto directo:</strong> (644) 410 8664 Ext. 1403 | <a href="mailto:ige@itesca.edu.mx">ige@itesca.edu.mx</a></p>
+      </div>
+    </section>
+    
+    <!-- ¿Quién eres como estudiante IGE? -->
+    <section>
+      <h2 class="section-title">¿Quién eres como estudiante IGE?</h2>
+      <div class="columns">
+        <ul>
+          <li>De los que hacen Excel como arte</li>
+          <li>Quien siempre quiere mejorar procesos</li>
+          <li>El que propone ideas en clase</li>
+          <li>Apasionado por los negocios, las startups o las ONGs</li>
+          <li>Fan del liderazgo, la estrategia y los datos</li>
+        </ul>
+        <p><strong>Entonces IGE es tu espacio.</strong></p>
+      </div>
+    </section>
+    
+    <!-- Test de Perfil de Ingreso (Interactividad) -->
+    <section>
+      <h2 class="section-title">Perfil de Ingreso – Test “Soy 100% IGE”</h2>
+      <div class="quiz">
+        <form id="quizForm">
+          <p>1. ¿Te gustan los retos y tomar decisiones importantes?</p>
+          <label><input type="radio" name="q1" value="si" required> Sí</label>
+          <label><input type="radio" name="q1" value="no"> No</label>
+          
+          <p>2. ¿Sientes que podrías liderar un equipo o empresa?</p>
+          <label><input type="radio" name="q2" value="si" required> Sí</label>
+          <label><input type="radio" name="q2" value="no"> No</label>
+          
+          <p>3. ¿Te interesa el análisis financiero y la estrategia?</p>
+          <label><input type="radio" name="q3" value="si" required> Sí</label>
+          <label><input type="radio" name="q3" value="no"> No</label>
+          
+          <p>4. ¿Crees que la innovación puede cambiarlo todo?</p>
+          <label><input type="radio" name="q4" value="si" required> Sí</label>
+          <label><input type="radio" name="q4" value="no"> No</label>
+          
+          <p>5. ¿Sueñas con crear tu propia empresa o mejorar una existente?</p>
+          <label><input type="radio" name="q5" value="si" required> Sí</label>
+          <label><input type="radio" name="q5" value="no"> No</label>
+          
+          <button type="button" onclick="evaluateQuiz()">Ver Resultado</button>
+          <p id="quizResult"></p>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Lo que aprenderás en IGE -->
+    <section>
+      <h2 class="section-title">Lo que aprenderás en IGE</h2>
+      <div class="columns">
+        <ul>
+          <li>Dominarás herramientas administrativas y financieras</li>
+          <li>Diseñarás estrategias de marketing desde cero</li>
+          <li>Optimizarás procesos industriales y productivos</li>
+          <li>Harás análisis financiero que impacten empresas reales</li>
+          <li>Aprenderás a aplicar TICs en la gestión de negocios</li>
+          <li>Liderarás equipos con enfoque ético y humano</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Testimonios – “Vida IGE” -->
+    <section>
+      <h2 class="section-title">Testimonios – “Vida IGE”</h2>
+      <div class="columns">
+        <blockquote>
+          “IGE me abrió los ojos a lo que quiero: liderar mi propio negocio y crecer profesionalmente”<br>
+          — Camila, 2do semestre
+        </blockquote>
+        <blockquote>
+          “Aprendes desde simuladores hasta prácticas en empresas reales, con mentores que sí te inspiran”<br>
+          — Ulises, 6to semestre
+        </blockquote>
+      </div>
+    </section>
+    
+    <!-- Tips de Estudio y Vida Universitaria -->
+    <section>
+      <h2 class="section-title">Tips de Estudio y Vida Universitaria</h2>
+      <div class="columns">
+        <ul>
+          <li>Ten tu agenda de proyectos lista desde el primer día</li>
+          <li>Aprende Excel a fondo: tablas dinámicas, macros y dashboards</li>
+          <li>Organiza tus carpetas y documentos digitales por proyecto</li>
+          <li>Nunca subestimes el poder de una buena exposición</li>
+          <li>Haz equipo con los que suman (y sí trabajan)</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Bloque Divertido – Humor IGE -->
+    <section>
+      <h2 class="section-title">Bloque Divertido – “Humor IGE”</h2>
+      <div class="columns">
+        <div>
+          <p><strong>IGE MEMES DEL MES:</strong></p>
+          <ul>
+            <li>“¿Qué tal el examen?” — “Gestioné mi ansiedad, pero no el resultado.”</li>
+            <li>“El Excel se cerró sin guardar... Y con él, mi alma.”</li>
+            <li>“Cuando el profe dice que el proyecto es ‘sencillo y rápido’… y terminas haciendo una tesis con presentación en Canva.”</li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>CHISTES RÁPIDOS:</strong></p>
+          <ul>
+            <li>¿Por qué el estudiante IGE no discutía con nadie? — Porque ya gestionaba suficientes conflictos en clase.</li>
+            <li>¿Cómo se llama el IGE que se perdió en la fábrica? — ¡Control de producción!</li>
+            <li>¿Sabes qué hace un IGE en una boda? — Evalúa la logística, mide los KPIs del banquete y propone mejoras para la próxima.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Inspiración IGE -->
+    <section>
+      <h2 class="section-title">Inspiración IGE</h2>
+      <blockquote>“Donde otros ven un problema, nosotros vemos una mejora en proceso.”</blockquote>
+    </section>
+    
+    <!-- Sección Profesional: ¡EMPRENDE TU FUTURO! -->
+    <section>
+      <h2 class="section-title">¡EMPRENDE TU FUTURO!</h2>
+      <div class="emprende-container">
+        
+        <!-- Columna 2: Descripción y Requisitos -->
+        <div class="emprende-col">
+          <h3>Descripción y Requisitos</h3>
+          <p>¿Te late el mundo de los negocios, los retos y liderar proyectos? La carrera de <strong>Ingeniería en Gestión Empresarial (IGE)</strong> es para quienes quieren transformar ideas en acciones.</p>
+          <p>Te formas como un profesional con visión global, preparado para diseñar estrategias que mejoren las empresas y optimicen procesos.</p>
+          <h4>¿Quién puede entrar a IGE?</h4>
+          <p>Si disfrutas entender cómo funcionan las empresas y tienes iniciativa, ¡vas por buen camino!</p>
+          <p><strong>Conocimientos ideales:</strong></p>
+          <ul>
+            <li>Administración, contabilidad y economía</li>
+            <li>Inglés básico</li>
+            <li>Tecnologías de la información y mercadotecnia</li>
+          </ul>
+          <p><strong>Valores:</strong> Respeto, honestidad, justicia, lealtad y responsabilidad</p>
+          <p><strong>Además, suma puntos si eres:</strong></p>
+          <ul>
+            <li>Analítico, organizado y buen comunicador</li>
+            <li>Fan de la tecnología</li>
+            <li>Comprometido con tus metas</li>
+            <li>Líder nato</li>
+            <li>Apasionado por los negocios, la innovación y la creación de proyectos</li>
+          </ul>
+        </div>
+        <!-- Columna 3: Aprendizaje, Misión & Visión y Beneficios -->
+        <div class="emprende-col">
+          <h3>Aprendizaje y Proyección</h3>
+          <p><strong>¿Qué aprenderás?</strong></p>
+          <ul>
+            <li>Tomar decisiones con base en datos reales</li>
+            <li>Crear estructuras organizacionales efectivas</li>
+            <li>Diseñar estrategias de marketing con análisis de mercado</li>
+            <li>Administrar recursos financieros de forma inteligente</li>
+            <li>Aplicar tecnologías para impulsar empresas</li>
+            <li>Resolver problemas con ética, liderazgo y trabajo en equipo</li>
+          </ul>
+          <h4>Misión & Visión</h4>
+          <p><strong>Visión:</strong> Ser un programa educativo sólido, innovador y humano.</p>
+          <p><strong>Misión:</strong> Crear líderes competitivos que usen la ingeniería y administración para mejorar empresas, siempre con ética y responsabilidad.</p>
+          <h4>Beneficios al Egresar</h4>
+          <ul>
+            <li>Diseñar estructuras administrativas eficientes</li>
+            <li>Crear estrategias de mercadotecnia efectivas</li>
+            <li>Analizar info financiera para decisiones clave</li>
+            <li>Lanzar proyectos con impacto social y rentable</li>
+            <li>Liderar equipos y organizaciones con impacto</li>
+            <li>Mejorar tu entorno laboral a través de calidad y seguridad</li>
+            <li>Ser un pro del aprendizaje autónomo</li>
+          </ul>
+          <p><strong>IGE no es solo una carrera, es una aventura para quienes quieren dejar huella. ¿Estás listo/a para tomar el mando?</strong></p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pie de Página -->
+    <footer>
+      <p>&copy; 2025 IGE NEWS - Todos los derechos reservados.</p>
+      <p>Contacto: ige@itesca.edu.mx | Tel: (644) 410 8664 Ext. 1403</p>
+    </footer>
+  </div>
+  
+  <script>
+    function evaluateQuiz() {
+      let score = 0;
+      const form = document.getElementById("quizForm");
+      for (let i = 1; i <= 5; i++) {
+        const answer = form["q" + i]?.value;
+        if (answer === "si") score++;
+      }
+      const result = document.getElementById("quizResult");
+      result.textContent = score >= 4
+        ? "¡Eres espíritu IGE total!"
+        : "¡Aún puedes descubrir tu perfil gestor!";
+    }
+  </script>
+</body>
+</html>
